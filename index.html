@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Personal portfolio showcasing projects, skills, experience, and certifications.">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+
+  <header class="header">
+    <a class="logo" href="#home">PORT<span>FOLIO.</span></a>
+
+    <button class="menu-toggle" id="menuToggle"
+      aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#certifications" class="nav-link">Certifications</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle"
+      aria-label="Toggle color theme">☼</button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span class="status-dot"></span> AVAILABLE FOR OPPORTUNITIES</p>
+        <p class="intro">Hello, I'm</p>
+        <h1>YOUR <span>NAME</span></h1>
+        <h2>I'm a <span id="typedText">Developer</span><span class="cursor">|</span></h2>
+        <p class="hero-description">
+          I build modern digital experiences with clean code, thoughtful
+          design, and a focus on solving real-world problems.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Explore My Work ↗</a>
+          <a href="#contact" class="btn btn-outline">Let's Talk</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          <a href="mailto:hello@example.com">Email ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="profile-frame">
+          <img src="https://placehold.co/600x750/101a29/00e5ff?text=Your+Photo"
+            alt="Profile portrait" id="profileImage">
+          <div class="image-overlay">CREATIVE MIND. CLEAN CODE.</div>
+        </div>
+        <div class="floating-card card-top">✦ <span>Creative</span></div>
+        <div class="floating-card card-bottom">⌘ <span>Developer</span></div>
+      </div>
+      <a class="scroll-indicator" href="#about">SCROLL TO EXPLORE ↓</a>
+    </section>
+
+    <section class="section section-alt" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">01 / GET TO KNOW ME</p>
+        <h2>About <span>Me</span></h2>
+        <p>A little about who I am and what drives me.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-image reveal">
+          <img src="https://placehold.co/650x750/101a29/00e5ff?text=About+Me"
+            alt="About me portrait" loading="lazy">
+          <div class="image-caption">ALWAYS LEARNING. ALWAYS BUILDING.</div>
+        </div>
+        <div class="about-copy reveal">
+          <h3>Turning ideas into <span>digital reality.</span></h3>
+          <p>
+            I'm a passionate developer interested in building useful,
+            accessible, and visually engaging digital products.
+          </p>
+          <p>
+            I enjoy exploring new technologies, solving challenging problems,
+            and transforming concepts into polished experiences.
+            This portfolio is where I share my journey and work.
+          </p>
+          <div class="stats-grid">
+            <div class="stat"><strong data-count="10">0</strong><span>Projects</span></div>
+            <div class="stat"><strong data-count="5">0</strong><span>Technologies</span></div>
+            <div class="stat"><strong data-count="3">0</strong><span>Certifications</span></div>
+          </div>
+          <a class="btn btn-primary" id="resumeLink"
+             href="#" target="_blank" rel="noopener noreferrer">View Resume ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">02 / WHAT I WORK WITH</p>
+        <h2>My <span>Skills</span></h2>
+        <p>Technologies and tools I use to bring ideas to life.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <section class="section section-alt" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">03 / MY JOURNEY</p>
+        <h2>Experience & <span>Education</span></h2>
+        <p>The experiences that continue to shape my career.</p>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">04 / SELECTED WORK</p>
+        <h2>Featured <span>Projects</span></h2>
+        <p>A selection of projects, experiments, and things I've built.</p>
+      </div>
+      <div class="filters" id="projectFilters"></div>
+      <div class="projects-grid" id="projectsGrid"></div>
+      <p class="empty-state" id="emptyProjects" hidden>No projects in this category yet.</p>
+    </section>
+
+    <section class="section section-alt" id="certifications">
+      <div class="section-heading reveal">
+        <p class="eyebrow">05 / KEEP GROWING</p>
+        <h2>My <span>Certifications</span></h2>
+        <p>Courses and achievements from my learning journey.</p>
+      </div>
+      <div class="cert-grid" id="certGrid"></div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading reveal">
+        <p class="eyebrow">06 / HAVE A PROJECT IN MIND?</p>
+        <h2>Let's Work <span>Together</span></h2>
+        <p>Have an idea, opportunity, or question? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's start a conversation.</h3>
+          <p>Tell me a little about what you're working on, and let's explore how we can collaborate.</p>
+          <a class="contact-detail" id="emailLink" href="mailto:hello@example.com">
+            <span>✉</span><div><small>EMAIL ME</small><strong id="emailText">hello@example.com</strong></div>
+          </a>
+          <a class="contact-detail" id="linkedinLink" href="https://linkedin.com/"
+             target="_blank" rel="noopener noreferrer">
+            <span>↗</span><div><small>CONNECT</small><strong>LinkedIn profile</strong></div>
+          </a>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="John Doe" required maxlength="100">
+
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" placeholder="john@example.com" required maxlength="200">
+
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Project inquiry" required maxlength="150">
+
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5"
+            placeholder="Tell me about your idea..." required maxlength="5000"></textarea>
+
+          <button class="btn btn-primary submit-btn" type="submit">Send Message ↗</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="logo" href="#home">PORT<span>FOLIO.</span></a>
+    <p>Designed with curiosity and built with care.</p>
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    <small>© <span id="year"></span> Your Name. All rights reserved.</small>
+  </footer>
+
+  <div class="modal" id="projectModal" role="dialog"
+       aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content">
+      <button class="modal-close" data-close-modal aria-label="Close dialog">×</button>
+      <img id="modalImage" src="" alt="">
+      <p class="eyebrow" id="modalCategory"></p>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+      <div class="tag-list" id="modalTags"></div>
+      <div class="modal-actions">
+        <a class="btn btn-primary" id="modalDemo" href="#" target="_blank"
+           rel="noopener noreferrer">Live Demo ↗</a>
+        <a class="btn btn-outline" id="modalGithub" href="#" target="_blank"
+           rel="noopener noreferrer">Source Code ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
